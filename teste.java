@@ -8,11 +8,16 @@ public class teste {
         //System.out.println(g.getAdj("ouro"));
         //g.calcH("ouro",1);
         //System.out.println(g.getH());
-        EdgeWeightedDigraphMod m = new EdgeWeightedDigraphMod("casof360.txt");
+        EdgeWeightedDigraphMod m = new EdgeWeightedDigraphMod("casof120.txt");
         BigInteger padrão = new BigInteger("1");
         //System.out.println(m.toDot());
-        m.calcH("ouro",padrão);
+        //long init = System.currentTimeMillis();
+        m.calcH("ouro");
+        //long stop = System.currentTimeMillis();
+        //System.out.println(stop - init);
         System.out.println(m.getH());
+
+        
     }
     
 }

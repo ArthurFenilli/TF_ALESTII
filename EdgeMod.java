@@ -22,6 +22,10 @@ public class EdgeMod {
     public BigInteger getWeight() {
       return weight;
     }
+
+    public void setWeight(BigInteger b){
+      weight = b;
+    }
   
     @Override
     public String toString() {

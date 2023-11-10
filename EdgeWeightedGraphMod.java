@@ -1,4 +1,6 @@
+import java.lang.reflect.Array;
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -51,7 +53,7 @@ public class EdgeWeightedGraphMod {
 
   public Iterable<EdgeMod> getAdj(String v) {
     List<EdgeMod> res = graph.get(v);
-    if (res == null) res = new LinkedList<>();
+    if (res == null) res = new ArrayList<>();
     return res;
   }
 
@@ -91,7 +93,7 @@ public class EdgeWeightedGraphMod {
   protected List<EdgeMod> addToList(String v, EdgeMod e) {
     List<EdgeMod> list = graph.get(v);
     if (list == null)
-      list = new LinkedList<>();
+      list = new ArrayList<>();
     list.add(e);
     graph.put(v, list);
     return list;

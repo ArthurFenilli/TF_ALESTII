@@ -1,4 +1,5 @@
 import java.math.BigInteger;
+import java.util.LinkedList;
 
 public class EdgeWeightedDigraphMod extends EdgeWeightedGraphMod {
     private BigInteger h;
@@ -55,6 +56,30 @@ public class EdgeWeightedDigraphMod extends EdgeWeightedGraphMod {
           }
           return;
   
+      }
+    }
+
+    public void calcH(String v){
+      LinkedList fila = new LinkedList<>();
+      LinkedList filaValor = new LinkedList<BigInteger>();
+      filaValor.addFirst(new BigInteger("1"));
+      fila.addFirst(v);
+      while(fila.isEmpty() == false){
+        Iterable<EdgeMod> l = getAdj((String) fila.removeFirst());
+        BigInteger g = (BigInteger) filaValor.removeFirst();
+         for(EdgeMod e: l){
+          if(!e.getW().equals("hidrogenio")){
+            e.setWeight(e.getWeight().multiply(g));
+            filaValor.add(e.getWeight());
+            fila.add(e.getW());
+          }
+          else{
+            g = e.getWeight().multiply(g);
+            h = h.add(g);
+          }
+          
+          }
+
       }
     }
   
