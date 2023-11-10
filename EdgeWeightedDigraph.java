@@ -3,7 +3,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class EdgeWeightedDigraph extends EdgeWeightedGraph {
-    private int h;
+    private double h;
 
   public EdgeWeightedDigraph() {
     super();
@@ -43,15 +43,24 @@ public class EdgeWeightedDigraph extends EdgeWeightedGraph {
     return sb.toString();
   }
 
-  public void calcH(Edge v, int hidrogenio){
-    if(v.getV().equals("hidrogenio"))
-    return;
-    else{
-        Iterable<Edge> l = getAdj(v.getV());
-        for(Edge w: l){
+  public void calcH(String v, double elemento){
+    if(v.equals("hidrogenio")){
+      h = h + elemento;
+      return;
 
+    }
+    else{
+        Iterable<Edge> l = getAdj(v);
+        for(Edge e: l){
+           calcH(e.getW(), e.getWeight() * elemento);
         }
+        return;
 
     }
   }
+
+  public double getH(){
+    return h;
+  }
+
 }
