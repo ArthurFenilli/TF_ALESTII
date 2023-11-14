@@ -1,30 +1,30 @@
 import java.math.BigInteger;
 
-public class EdgeMod {
-    private String v;
-    private String w;
+public class EdgeMod2 {
+    private Vert v;
+    private Vert w;
     private BigInteger weight;
   
-    public EdgeMod(String v, String w, BigInteger weight) {
+    public EdgeMod2(Vert v, Vert w, BigInteger weight) {
       this.v = v;
       this.w = w;
       this.weight = weight;
     }
   
-    public String getV() {
+    public Vert getV() {
       return v;
     }
+
+    public String getVS(){
+        return v.getName();
+    }
+
+    public String getWS(){
+        return w.getName();
+    }
   
-    public String getW() {
+    public Vert getW() {
       return w;
-    }
-
-    public void setV(String v){
-      this.v = v;
-    }
-
-    public void setW(String w){
-      this.w = w;
     }
   
     public BigInteger getWeight() {
@@ -39,4 +39,5 @@ public class EdgeMod {
     public String toString() {
       return v + "-" + w + " (" + weight + ")";
     }
+    
 }

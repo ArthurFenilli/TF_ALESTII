@@ -8,14 +8,26 @@ public class teste {
         //System.out.println(g.getAdj("ouro"));
         //g.calcH("ouro",1);
         //System.out.println(g.getH());
-        EdgeWeightedDigraphMod m = new EdgeWeightedDigraphMod("casof120.txt");
-        BigInteger padrão = new BigInteger("1");
+        //EdgeWeightedDigraphMod m = new EdgeWeightedDigraphMod("casoteste.txt");
+        //System.out.println(m.getAdj("ouro"));
+        //BigInteger padrão = new BigInteger("1");
         //System.out.println(m.toDot());
         //long init = System.currentTimeMillis();
-        m.calcH("ouro");
+        //m.calcH("ouro",padrão);
         //long stop = System.currentTimeMillis();
         //System.out.println(stop - init);
-        System.out.println(m.getH());
+        //System.out.println(m.getH());
+        // -------------------------------------------------------------------------------------------------------------------//
+        EdgeWeightedGraphMod2 p = new EdgeWeightedGraphMod2("casoteste.txt");
+        //System.out.println(p.toDot());
+        //System.out.println(p.getHidrogenioVert().getName());
+        //p.calcH(p.getHidrogenioVert());
+        //System.out.println(p.getAdj("hidrogeniof"));
+        p.somaH();
+        System.out.println(p.hidr);
+       //System.out.println(p.getAdj(p.getHidrogenioVert()));
+       //System.out.println(p.getTotalVerts());
+        
 
         
     }
