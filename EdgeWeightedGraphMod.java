@@ -67,6 +67,7 @@ public class EdgeWeightedGraphMod {
           return false;
         }
       }
+    }
     
     return true;
   }

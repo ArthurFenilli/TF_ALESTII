@@ -8,13 +8,13 @@ import java.util.Set;
 
 public class EdgeWeightedGraphMod2 {
     protected static final String NEWLINE = System.getProperty("line.separator");
-  private ArrayList<Vert> verifica;
+  protected ArrayList<Vert> verifica;
   protected Map<Vert, List<EdgeMod2>> graph;
   protected Set<Vert> vertices;
   protected int totalVertices;
   protected int totalEdges;
   public BigInteger hidr;
-  private Vert hidrogênio;
+  protected Vert hidrogênio;
   public Vert ouro;
 
   public EdgeWeightedGraphMod2() {

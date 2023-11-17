@@ -18,15 +18,11 @@ public class teste {
         //System.out.println(stop - init);
         //System.out.println(m.getH());
         // -------------------------------------------------------------------------------------------------------------------//
-        EdgeWeightedGraphMod2 p = new EdgeWeightedGraphMod2("casoteste.txt");
+        EdgeWeightedGraphMod2 p = new EdgeWeightedDigraphMod2("casof360.txt");
         //System.out.println(p.toDot());
-        //System.out.println(p.getHidrogenioVert().getName());
-        //p.calcH(p.getHidrogenioVert());
-        //System.out.println(p.getAdj("hidrogeniof"));
-        p.somaH();
-        System.out.println(p.hidr);
-       //System.out.println(p.getAdj(p.getHidrogenioVert()));
-       //System.out.println(p.getTotalVerts());
+        //System.out.println(p.hidrogênio.getEdgeCount());
+        p.calcH(p.ouro);
+        System.out.println(p.hidrogênio.getValue());
         
 
         

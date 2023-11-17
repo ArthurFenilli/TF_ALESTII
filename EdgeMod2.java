@@ -9,6 +9,7 @@ public class EdgeMod2 {
       this.v = v;
       this.w = w;
       this.weight = weight;
+    
     }
   
     public Vert getV() {
